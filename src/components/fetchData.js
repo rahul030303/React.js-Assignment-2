@@ -32,10 +32,11 @@ export class FetchData extends Component{
         return(
             <div>
                 <h2>User Data</h2>
-                <h4>User Id: {this.state.userId}</h4>
-                <h4>Title: {this.state.title}</h4>
-                <h4>Body: {this.state.body}</h4>
-                
+                <ul>
+                <li><h4>User Id: {this.state.userId}</h4></li>
+                <li><h4>Title: {this.state.title}</h4></li>
+                <li><h4>Body: {this.state.body}</h4></li>
+                </ul>
                 
                 <button onClick={this.showData}>show user data</button>
                 
