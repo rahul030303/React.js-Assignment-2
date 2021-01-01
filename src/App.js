@@ -1,8 +1,12 @@
 import './App.css';
+import React from 'react';
 import {BrowserRouter as Router,Route,Link,Switch} from 'react-router-dom';
 import {Dashboard} from './components/dashboard';
 import  {addLanguage} from './components/addLanguage';
-import {FetchData} from './components/fetchData';
+import LazyRender from './components/lazyRender';
+
+
+
 
 function App() {
   return (
@@ -19,9 +23,8 @@ function App() {
           <Switch>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route exact path="/add-language" component={addLanguage}/>
-            <Route exact path="/user-data" component={FetchData}/>
+            <Route  path="/user-data" component={LazyRender}/>
           </Switch>
-          
           </Router>
     </div>
   );
